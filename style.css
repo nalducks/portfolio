@@ -1,0 +1,602 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: auto;
+}
+.navbar {
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    display: flex;
+    height: 8vh;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+.name {
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: -5rem;
+    padding: 0 0 0 20rem;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+}
+.menu {
+    list-style: none;
+}
+.menu li {
+    display: inline;
+    padding: 0 1rem 0 1rem;
+}
+.menu li:last-child {
+    padding-right: 20rem;
+}
+.menu li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: whitesmoke;
+    font-family: 'roboto', sans-serif;
+    transition: 0.3s;
+}
+.menu li a:hover.active,
+.sidebar li a:hover.active {
+    color: grey;
+    transition: 0.3s;
+}
+
+/* Style the dropdown */
+
+
+.menuSidebar {
+    cursor: pointer;
+    color: whitesmoke;
+    padding: 1rem;
+    font-weight: bold;
+}
+.sidebar.active {
+    right: 0%;
+    transition: 0.5s;
+}
+.sidebar {
+  list-style-type: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  top: 100%;
+  margin: 0;
+  right: -100%;
+  height: 100vh;
+  width: 40vw;
+  border: 1px solid #333;
+  transition: 0.5s;
+}
+
+.sidebar li {
+  margin: 1rem 3rem 1rem 0;
+  text-align: right;
+}
+
+.sidebar li:first-child {
+   margin-top: 3rem;
+}
+
+.sidebar li a {
+    font-family: 'roboto', sans-serif;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.halaman {}
+.home {
+    margin-top: 7rem;
+    width: 60%;
+}
+.home img {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 100%;
+}
+.homeBox {
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    color : whitesmoke;
+    font-family: 'Playfair Display', sans-serif;
+}
+.homeBox p:nth-child(1) {
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+.homeBox p:nth-child(2) {
+    margin-top: -1rem;
+    font-size: 3rem;
+}
+.homeBox a {
+    text-decoration: none;
+    border-radius: 3rem;
+    padding: 0.8rem;
+    margin : 1rem;
+    font-size: 1rem;
+}
+.homeBox a:nth-child(3) {
+    background-color:whitesmoke;
+    color: black;
+}
+.homeBox a:nth-child(4) {
+    border: 1.5px solid white;
+    color: whitesmoke;
+}
+
+.about,
+.skill,
+.experience,
+.projec {
+    margin-top: 2rem;
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    color : whitesmoke;
+    font-family: 'Playfair Display', sans-serif;
+}
+h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+}
+.about p:nth-child(2),
+.about p:nth-child(3),
+.about p:nth-child(4),
+.about p:nth-child(5) {
+    font-size: 1rem;
+}
+.skill p,
+.experience p {
+    font-size: 2rem;
+}
+.skill a {
+    padding: 0.8rem;
+}
+.skill a img {
+    width: 3rem;
+    border-radius: 8px;
+    background-color: whitesmoke;
+}
+.experienceBox {
+    justify-content: space-between;
+    display: flex;
+    font-family: 'roboto', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+.experienceBox img {
+    width: 2vw;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin: 0 1rem -0.5rem 0;
+}
+.experienceBox a:nth-child(1){
+    font-size: 1.2rem;
+}
+.experienceBox a:nth-child(2){
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+.experience p {
+    font-size: 1rem;
+    display: flex;
+    padding: 0;
+    text-align: left;
+}
+
+.projects {
+      width: 60%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+}
+.project {
+      background: grey;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: #333;
+      padding-bottom: 1rem;
+}
+.project img {
+      height: 30vh;
+      width: 100%;
+      border-radius: 1rem 1rem 0 0;
+      opacity: 0.8;
+      transition: 0.3s;
+}
+.project img:hover {
+     opacity: 0.5;
+     transition: 0.3s;
+}
+.project h3 {
+      margin: 0;
+      padding-left: 1rem;
+}
+.project a {
+      color: #333;
+      margin: 0;
+      font-size: 0.8rem;
+}
+.project a:nth-child(3) {
+      margin: 1rem;
+      font-size: 1rem;
+}
+.project a:last-child:hover{
+    color: #dadada;
+}
+
+footer {
+    color: whitesmoke;
+    background-color: black;
+    height: auto;
+    width: 100%;
+}
+.descrip {
+    padding: 5rem 20rem 5rem 20rem;
+}
+.descrip a {
+    margin-right: 0.5rem;
+    color: whitesmoke;
+    transition: 0.3s;
+}
+.descrip a:hover {
+    color: grey;
+    transition: 0.3s;
+}
+.descrip p:last-child {
+    font-size: 0.8rem;
+}
+
+
+
+@media (min-width: 1025px) and (max-width: 2440px) {
+
+body {
+    margin: 0;
+    padding: auto;
+}
+.navbar {
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    display: flex;
+    height: 8vh;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+.name {
+    text-decoration: none;
+    margin-right: -5rem;
+    padding: 0 0 0 20rem;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+}
+.menu {
+    list-style: none;
+}
+.menu li {
+    display: inline;
+    padding: 0 1rem 0 1rem;
+}
+.menu li:last-child {
+    padding-right: 20rem;
+}
+.menu li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: whitesmoke;
+    font-family: 'roboto', sans-serif;
+    transition: 0.3s;
+}
+.menu li a:hover,
+.menu li a.active {
+    color: grey;
+    transition: 0.3s;
+}
+.menuSidebar,
+.sidebar {
+    display: none;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.halaman {}
+.home {
+    margin-top: 7rem;
+    width: 60%;
+}
+.home img {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 100%;
+}
+.homeBox {
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    color : whitesmoke;
+    font-family: 'Playfair Display', sans-serif;
+}
+.homeBox p:nth-child(1) {
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+.homeBox p:nth-child(2) {
+    margin-top: -1rem;
+    font-size: 3rem;
+}
+.homeBox a {
+    text-decoration: none;
+    border-radius: 3rem;
+    padding: 0.8rem;
+    margin : 1rem;
+    font-size: 1rem;
+}
+.homeBox a:nth-child(3) {
+    background-color:whitesmoke;
+    color: black;
+}
+.homeBox a:nth-child(4) {
+    border: 1.5px solid white;
+    color: whitesmoke;
+}
+
+.about,
+.skill,
+.experience,
+.projec {
+    margin-top: 2rem;
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    color : whitesmoke;
+    font-family: 'Playfair Display', sans-serif;
+}
+h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+}
+.about p:nth-child(2),
+.about p:nth-child(3),
+.about p:nth-child(4),
+.about p:nth-child(5) {
+    font-size: 1rem;
+}
+.skill p,
+.experience p {
+    font-size: 2rem;
+}
+.skill a {
+    padding: 0.8rem;
+}
+.skill a img {
+    width: 3rem;
+    border-radius: 8px;
+    background-color: whitesmoke;
+}
+.experienceBox {
+    justify-content: space-between;
+    display: flex;
+    font-family: 'roboto', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+.experienceBox img {
+    width: 2vw;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin: 0 1rem -0.5rem 0;
+}
+.experienceBox a:nth-child(1){
+    font-size: 1.2rem;
+}
+.experienceBox a:nth-child(2){
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+.experience p {
+    font-size: 1rem;
+    display: flex;
+    padding: 0;
+    text-align: left;
+}
+
+.projects {
+      width: 60%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+}
+.project {
+      background: grey;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: #333;
+      padding-bottom: 1rem;
+}
+.project img {
+      height: 30vh;
+      width: 100%;
+      border-radius: 1rem 1rem 0 0;
+      opacity: 0.8;
+      transition: 0.3s;
+}
+.project img:hover {
+     opacity: 0.5;
+     transition: 0.3s;
+}
+.project h3 {
+      margin: 0;
+      padding-left: 1rem;
+}
+.project a {
+      color: #333;
+      margin: 0;
+      font-size: 0.8rem;
+}
+.project a:nth-child(3) {
+      margin: 1rem;
+      font-size: 1rem;
+}
+.project a:last-child:hover{
+    color: #dadada;
+}
+
+footer {
+    color: whitesmoke;
+    background-color: black;
+    height: auto;
+    width: 100%;
+}
+.descrip {
+    padding: 5rem 20rem 5rem 20rem;
+}
+.descrip a {
+    margin-right: 0.5rem;
+    color: whitesmoke;
+    transition: 0.3s;
+}
+.descrip a:hover {
+    color: grey;
+    transition: 0.3s;
+}
+.descrip p:last-child {
+    font-size: 0.8rem;
+}
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+
+.name {
+    padding: 0 0 0 5rem;
+}
+.menu {
+   display: none;
+}
+.menuSidebar {
+   display: inline;
+}
+.menuSidebar:focus + #sidebar {
+   display: inline;
+}
+
+.home {
+    margin-top: 7rem;
+    width: 85%;
+}
+.home img {
+    height: 15rem;
+    width: 15rem;
+}
+
+.homeBox p:nth-child(1) {
+    font-size: 1.2rem;
+}
+.homeBox p:nth-child(2) {
+    font-size: 2rem;
+}
+.homeBox a {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.about,
+.skill,
+.experience,
+.projec {
+    margin-top: 3rem;
+    width: 85%;
+}
+h1 {
+    font-size: 1.8rem;
+}
+
+
+.experienceBox img {
+    display: none;
+}
+.experienceBox a:nth-child(1){
+    font-size: 1rem;
+    text-align: left;
+    padding: 0rem;
+}
+.experienceBox a:nth-child(2){
+    font-size: 0.7rem;
+    padding: 0.2rem;
+    text-align: right;
+}
+.experience p {
+    font-size: 0.9rem;
+}
+.projects {
+    width: 90%;
+    grid-gap: 0.5rem;
+}
+
+.project img {
+    height: 14vh;
+}
+
+.project h3 {
+    font-size: 1rem;
+
+}
+.project a {
+    color: #333;
+    margin: 0rem;
+    display: block;
+}
+.project a:nth-child(3) {
+    margin: 0 0 0 1rem;
+    font-size: 0.8rem;
+    width: 40vw;
+}
+.project a:last-child {
+    margin-left: 1rem;
+    font-size: 0.8rem;
+}
+footer {
+    color: whitesmoke;
+    background-color: black;
+    height: auto;
+    width: 100%;
+}
+.descrip {
+    padding: 2.5rem;
+}
+}
