@@ -621,7 +621,6 @@ h1 {
 .experience p {
     font-size: 0.9rem;
 }
-
 .projects {
      width: 90%;
      display: inline;
@@ -669,7 +668,7 @@ footer {
     top: 83%;
 }
 .contactBar a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem;
 }
 }
@@ -685,7 +684,6 @@ footer {
 }
 }
 
-
 @media screen and (max-width: 375px) {
 .project img {
     height: 22vh;
@@ -699,12 +697,7 @@ footer {
     height: 6%;
     top: 85%;
 }
-.contactBar a {
-  font-size: 1rem;
-  padding: 0.5rem;
 }
-}
-
 
 @media screen and (max-width: 320px) {
 .name {
