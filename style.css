@@ -14,12 +14,13 @@ body {
     z-index: 1;
     position: fixed;
     width: 100%;
+    border-bottom: 1px solid #333;
 }
 .name {
     cursor: pointer;
     text-decoration: none;
     margin-right: -5rem;
-    padding: 0 0 0 20rem;
+    padding: 0 0 0 20%;
     font-size: 1.5rem;
     color: whitesmoke;
     font-weight: bold;
@@ -51,44 +52,63 @@ body {
 /* Style the dropdown */
 
 
-.menuSidebar {
+.btnBar {
     cursor: pointer;
     color: whitesmoke;
     padding: 1rem;
     font-weight: bold;
+    transition: 0.5s;
+}
+.sidebar {
+    position: absolute;
+    background-color: #1a1a1a;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 40vw;
+    border: 1px solid #333;
+    transition: 0.5s;
+    display: flex;
 }
 .sidebar.active {
     right: 0%;
     transition: 0.5s;
 }
-.sidebar {
-  list-style-type: none;
-  position: absolute;
-  background-color: #1a1a1a;
-  top: 100%;
-  margin: 0;
-  right: -100%;
-  height: 100vh;
-  width: 40vw;
-  border: 1px solid #333;
-  transition: 0.5s;
+.menuBar {
+    width: 40vw;
+    list-style-type: none;
+    display: inline;
+    margin: 2rem 0 8rem 0;
 }
-
-.sidebar li {
+.menuBar li {
   margin: 1rem 3rem 1rem 0;
   text-align: right;
 }
-
-.sidebar li:first-child {
+.menuBar li:first-child {
    margin-top: 3rem;
 }
-
-.sidebar li a {
+.menuBar li a {
     font-family: 'roboto', sans-serif;
     text-decoration: none;
     color: whitesmoke;
 }
-
+.contactBar {
+    width: 40vw;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    position: absolute;
+    border-top: 1px solid #333;
+    top: 80%;
+    display: flex;
+}
+.contactBar a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #818181;
+  display: flex;
+  padding: 0.7rem;
+}
 
 section {
     display: flex;
@@ -242,6 +262,7 @@ h1 {
 }
 .project a:last-child:hover{
     color: #dadada;
+    transition: 0.3s;
 }
 
 footer {
@@ -268,7 +289,7 @@ footer {
 
 
 
-@media (min-width: 1025px) and (max-width: 2440px) {
+@media screen and (max-width: 2440px) {
 
 body {
     margin: 0;
@@ -287,7 +308,7 @@ body {
 .name {
     text-decoration: none;
     margin-right: -5rem;
-    padding: 0 0 0 20rem;
+    padding: 0 0 0 20%;
     font-size: 1.5rem;
     color: whitesmoke;
     font-weight: bold;
@@ -315,8 +336,7 @@ body {
     color: grey;
     transition: 0.3s;
 }
-.menuSidebar,
-.sidebar {
+.btnBar {
     display: none;
 }
 
@@ -497,24 +517,66 @@ footer {
 }
 }
 
-
-
-@media only screen and (max-width: 480px) {
-
+@media screen and (max-width: 1440px) {
 
 .name {
-    padding: 0 0 0 5rem;
+    padding: 0 0 0 10%;
+}
+.menu li:last-child {
+    padding-right: 10rem;
+}
+.home {
+    width: 65%;
+}
+.homeBox p:nth-child(1) {
+    margin-top: 2rem;
+}
+.homeBox p:nth-child(2) {
+    margin-top: -2rem;
+}
+.about,
+.skill,
+.experience,
+.projec {
+    width: 78%;
+}
+.projects {
+    width: 78%;
+}
+.project img {
+    height: 27vh;
+}
+.descrip {
+    padding: 5rem 11rem 5rem 11rem;
+}
+}
+
+@media screen and (max-width: 1024px) {
+.menu li:last-child {
+    padding-right: 7rem;
+}
+.project img {
+    height: 24vh;
+}
+.descrip {
+    padding: 5rem 7rem 5rem 7rem;
+}
+}
+
+@media screen and (max-width: 768px) {
+
+.name {
+    padding: 0 0 0 5%;
 }
 .menu {
    display: none;
 }
-.menuSidebar {
+.btnBar {
    display: inline;
 }
 .menuSidebar:focus + #sidebar {
    display: inline;
 }
-
 .home {
     margin-top: 7rem;
     width: 85%;
@@ -523,7 +585,6 @@ footer {
     height: 15rem;
     width: 15rem;
 }
-
 .homeBox p:nth-child(1) {
     font-size: 1.2rem;
 }
@@ -534,7 +595,6 @@ footer {
     padding: 0.5rem;
     font-size: 0.8rem;
 }
-
 .about,
 .skill,
 .experience,
@@ -545,8 +605,6 @@ footer {
 h1 {
     font-size: 1.8rem;
 }
-
-
 .experienceBox img {
     display: none;
 }
@@ -563,18 +621,19 @@ h1 {
 .experience p {
     font-size: 0.9rem;
 }
+
 .projects {
-    width: 90%;
-    grid-gap: 0.5rem;
+     width: 90%;
+     display: inline;
 }
-
+.projects > div {
+     margin: 1.5rem;
+}
 .project img {
-    height: 14vh;
+    height: 50vh;
 }
-
 .project h3 {
     font-size: 1rem;
-
 }
 .project a {
     color: #333;
@@ -584,7 +643,7 @@ h1 {
 .project a:nth-child(3) {
     margin: 0 0 0 1rem;
     font-size: 0.8rem;
-    width: 40vw;
+    width: 100%;
 }
 .project a:last-child {
     margin-left: 1rem;
@@ -598,5 +657,73 @@ footer {
 }
 .descrip {
     padding: 2.5rem;
+}
+}
+
+@media screen and (max-width: 480px) {
+.project img {
+    height: 32vh;
+}
+.contactBar {
+    height: 8%;
+    top: 83%;
+}
+.contactBar a {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+}
+
+@media screen and (max-width: 425px) {
+.project img {
+    height: 26vh;
+}
+.project a:nth-child(3) {
+    margin: 0 0 0 1rem;
+    font-size: 0.8rem;
+    width: 90%;
+}
+}
+
+
+@media screen and (max-width: 375px) {
+.project img {
+    height: 22vh;
+}
+.project a:nth-child(3) {
+    margin: 0 0 0 1rem;
+    font-size: 0.8rem;
+    width: 90%;
+}
+.contactBar {
+    height: 6%;
+    top: 85%;
+}
+.contactBar a {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+}
+
+
+@media screen and (max-width: 320px) {
+.name {
+    font-size: 1.2rem;
+}
+.project img {
+    height: 18vh;
+}
+.project a:nth-child(3) {
+    margin: 0 0 0 1rem;
+    font-size: 0.8rem;
+    width: 90%;
+}
+.contactBar {
+    height: 6%;
+    top: 85%;
+}
+.contactBar a {
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 }
