@@ -518,7 +518,6 @@ footer {
 }
 
 @media screen and (max-width: 1440px) {
-
 .name {
     padding: 0 0 0 10%;
 }
@@ -564,7 +563,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-
 .name {
     padding: 0 0 0 5%;
 }
@@ -642,7 +640,7 @@ h1 {
 .project a:nth-child(3) {
     margin: 0 0 0 1rem;
     font-size: 0.8rem;
-    width: 100%;
+    width: 90%;
 }
 .project a:last-child {
     margin-left: 1rem;
@@ -677,21 +675,11 @@ footer {
 .project img {
     height: 26vh;
 }
-.project a:nth-child(3) {
-    margin: 0 0 0 1rem;
-    font-size: 0.8rem;
-    width: 90%;
-}
 }
 
 @media screen and (max-width: 375px) {
 .project img {
     height: 22vh;
-}
-.project a:nth-child(3) {
-    margin: 0 0 0 1rem;
-    font-size: 0.8rem;
-    width: 90%;
 }
 .contactBar {
     height: 6%;
@@ -705,18 +693,5 @@ footer {
 }
 .project img {
     height: 18vh;
-}
-.project a:nth-child(3) {
-    margin: 0 0 0 1rem;
-    font-size: 0.8rem;
-    width: 90%;
-}
-.contactBar {
-    height: 6%;
-    top: 85%;
-}
-.contactBar a {
-  font-size: 1rem;
-  padding: 0.5rem;
 }
 }
