@@ -27,12 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
     updateActiveSection(); // Aktifkan menu saat halaman dimuat
 });
 
-
-
-
-
 function toggleMenu() {
-  var menuBtn = document.querySelector('.menuSidebar');
+  var menuBtn = document.querySelector('.btnBar');
   var sidebar = document.querySelector('.sidebar');
 
   if (menuBtn.innerHTML === '☰') {
@@ -44,11 +40,9 @@ function toggleMenu() {
   }
 }
 
-
-
-
 function refresh() {
   setTimeout(() => {
     location.reload();
+    window.location.href = 'index.html';
   }, 100);
 }
