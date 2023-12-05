@@ -467,7 +467,8 @@ h1 {
       padding-bottom: 1rem;
 }
 .project img {
-      height: 30vh;
+      height: 100%;
+      max-height: 30vh;
       width: 100%;
       border-radius: 1rem 1rem 0 0;
       opacity: 0.8;
@@ -543,7 +544,7 @@ footer {
     width: 78%;
 }
 .project img {
-    height: 27vh;
+    max-height: 85%;
 }
 .descrip {
     padding: 5rem 11rem 5rem 11rem;
@@ -555,7 +556,7 @@ footer {
     padding-right: 7rem;
 }
 .project img {
-    height: 24vh;
+    max-height: 75%;
 }
 .descrip {
     padding: 5rem 7rem 5rem 7rem;
@@ -627,7 +628,8 @@ h1 {
      margin: 1.5rem;
 }
 .project img {
-    height: 50vh;
+    height: 100%;
+    max-height: 50vh
 }
 .project h3 {
     font-size: 1rem;
@@ -658,40 +660,25 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-.project img {
-    height: 32vh;
-}
+
 .contactBar {
     height: 8%;
     top: 83%;
 }
 .contactBar a {
-  font-size: 1rem;
+  font-size: 1%;
   padding: 0.5rem;
 }
 }
 
-@media screen and (max-width: 425px) {
-.project img {
-    height: 26vh;
-}
+@media screen and (max-width: 375px) {
+.name {
+    padding: 0 0 0 5%;
+    font-size: 1.2rem;
 }
 
-@media screen and (max-width: 375px) {
-.project img {
-    height: 22vh;
-}
 .contactBar {
     height: 6%;
     top: 85%;
-}
-}
-
-@media screen and (max-width: 320px) {
-.name {
-    font-size: 1.2rem;
-}
-.project img {
-    height: 18vh;
 }
 }
