@@ -666,8 +666,8 @@ footer {
     top: 83%;
 }
 .contactBar a {
-  font-size: 1%;
-  padding: 0.5rem;
+  font-size: 100%;
+  padding: 5%;
 }
 }
 
