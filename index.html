@@ -170,6 +170,7 @@
 <footer class="halaman" id="section6">
 	<div class="descrip">
 		<h2>Contact</h2>
+                <p>Pengunjung: <span id="visitorCount"></span></p>
 		<p>Terhubung Dengan Saya!</p>
 		<a href="https://linkedin.com/in/dhanycaturprasetya" target="_blank"><i class="fa fa-linkedin"></i></a>
 		<a href="https://github.com/nalducks" target="_blank"><i class="fa fa-github"></i></a>
@@ -179,5 +180,7 @@
 	</div>
 </footer>
 </body>
-<script src="script.js"></script>
+<script src="script.js">
+	  document.getElementById('visitorCount').innerText = localStorage.getItem('visitors');
+</script>
 </html>
