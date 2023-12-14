@@ -49,24 +49,23 @@ function refresh() {
 
 
 
+    // Fungsi untuk melacak pengunjung
+    function trackVisitors() {
+      let visitors = localStorage.getItem('visitorCount');
 
-// Fungsi untuk mengambil dan menambah jumlah pengunjung
-function trackVisitors() {
-  let visitors = localStorage.getItem('visitors');
+      // Jika tidak ada data tentang pengunjung, inisialisasi dengan 1
+      if (!visitors) {
+        visitors = 1;
+      } else {
+        visitors = parseInt(visitors) + 1;
+      }
 
-  // Jika tidak ada data tentang pengunjung, inisialisasi dengan 1
-  if (!visitors) {
-    visitors = 1;
-  } else {
-    visitors = parseInt(visitors) + 1;
-  }
+      // Simpan jumlah pengunjung di localStorage
+      localStorage.setItem('visitorCount', visitors);
 
-  // Simpan jumlah pengunjung di localStorage
-  localStorage.setItem('visitors', visitors);
+      // Tampilkan jumlah pengunjung di elemen HTML
+      document.getElementById('visitorCount').innerText = visitors;
+    }
 
-  // Tampilkan jumlah pengunjung di console atau di tempat yang sesuai di halaman Anda
-  console.log('Anda adalah pengunjung ke-', visitors);
-}
-
-// Panggil fungsi saat halaman dimuat
-trackVisitors();
+    // Panggil fungsi saat halaman dimuat
+    trackVisitors();
