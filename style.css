@@ -152,12 +152,26 @@ section {
     font-size: 1rem;
 }
 .homeBox a:nth-child(3) {
-    background-color:whitesmoke;
+    background-color: whitesmoke;
+    border: 1.5px solid white;
     color: black;
+    transition: 0.3s;
+}
+.homeBox a:nth-child(3):hover {
+    border: 1.5px solid white;
+    background-color: black;
+    color: whitesmoke;
+    transition: 0.3s;
 }
 .homeBox a:nth-child(4) {
     border: 1.5px solid white;
     color: whitesmoke;
+    transition: 0.3s;
+}
+.homeBox a:nth-child(4):hover {
+    color: #333;
+    background-color: whitesmoke;
+    transition: 0.3s;
 }
 
 .about,
